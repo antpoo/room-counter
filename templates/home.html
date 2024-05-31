@@ -2,10 +2,25 @@
 <html>
 
 <head>
-    <title>
-        Main Hub
-    </title>
-    
+    <title>Main Hub</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
+    <script src="static/home.js"></script>
 </head>
+
+<body>
+
+    <h1>Main Dashboard</h1>
+
+    <p id="counter">There are 0 people in the room.</p>
+
+    <h2>People in room</h2>
+    <div class="gallery">
+        {% for image in images %}
+            <img src="{{ image }}" alt="Person">
+        {% endfor %}
+    </div>
+
+</body>
 
 </html>
